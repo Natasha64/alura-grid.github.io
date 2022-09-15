@@ -1,0 +1,102 @@
+/*VAMOS A COMPLETAR LA PRIMERA AREA EN GRID*/
+/*Seccion principal destaque del html lo primero*/
+.destaques{
+display: grid;/*se va a comportar como grid*/
+ grid-template-columns: 25% 25% 25% 25%;/*columnas y filas*//*1, 2, 3, 4, y si dividimos entre 100% entre 4, nos daría para un total de 25 cada una. Y vamos a hacer lo siguiente: vamos a colocar 25% para la primera columna, 25% para la segunda, 25% para la tercera y 25% para la cuarta.*/
+grid-template-rows: 33.33% 33.33% 33.33%;/*lineas*//*Serían una, dos, tres. Si tenemos esto al 100%, tendríamos que dividir esto en tres partes.Eso daría un 33.33%, que da un máximo, casi 100, de 99,99. Entonces, vamos ahora a definir al grid-template de las líneas: grid-template-rows: 33.33%; 33. 33% para la segunda y 33.33% para la tercera.*/
+height:calc(100vh - 50px) ;/*Colocamos una altura a la seccion de estaque para que ocupe todo el ancho y que comience a partir de los 50px*/
+gap: .3rem;/*espaciamiento blanco que se va a ver*/
+}
+
+/*Seccion principal nos va a dejar un link . para la codificacion de 2 clases en una que seria destaques__principal  y la otra box*/
+.destaques__principal {
+  background: url('../img/fortnite.jpg')center/ cover no-repeat;/*Primer imagen sin embargo son 3 columnas y dos filas*//*background size aca se acomoda*//*aca se centra*//*en cambio que la imagen sea mucho mayor o menor se va a empezar a repetir y para eso esta esto*/ 
+  grid-column:1/ 4; /*Donde comienza y termina sacamos el column start para no repetir tanto codigo*//*y termina en la columna 3 la cambiamos a 4 para que abarque un poco mas y no tengamos problema pero es solo un cuarto*/
+  grid-row:1 / 3;/* Donde comienza y donde termina poner en practica esto*//*y esto la imagen se me viene para que sea vea completa y no a la mitad*/
+  
+}
+
+
+/*Segunda seccion de columna en este caso tenemos a pubg
+para que no se nos repita para abajo tenemos que poner en nth-child(2)y asi sucesivamente*/
+.destaques__secundario:nth-child(2){
+ background: url('../img/pubg.jpg')center/ cover no-repeat; /*cover Abarca el espacio que le corresponde*/
+ grid-column: 4 / 4;/*recordemos empieza /*Termina*/
+ grid-row:1 / 2;/*La que inicia  la fila /*y termina la fila*/
+ 
+}
+
+
+/*tercer imagen*/
+.destaques__secundario:nth-child(3){
+    background:url('../img/slack.png')center/ cover no-repeat;
+    grid-column: 4 / 5;
+    grid-row:2 / 3;
+   
+}
+/*Cuarta imagen*/
+.destaques__secundario:nth-child(4){
+    background: url('../img/whatsapp.png') center/ cover no-repeat;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+
+}
+
+/*Quinta imagen*/
+.destaques__secundario:nth-child(5){
+    background: url('../img/cs-go.jpg') center/ cover no-repeat;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+                 /*Aca terminaron las imagenes*/
+
+/*Seccion de categorias*/
+.destaques__categorias{
+  grid-column: 1 / 3;/*Empieza en la columna 1 y termina en la3*/
+  grid-row:3 / 4 ;/*Cuantas lineas se van a ocupar */
+}
+
+/*Seria el ul*/
+.destaques__categorias___lista{
+   display: flex;
+   flex-wrap: wrap;
+   height: 100%;/*altura de 100% para cada una*/
+   justify-content: space-between;/*Espacio entre si*/
+}
+
+/*Items del li*/
+.destaques__categorias___item{
+    align-items: center;/*Necesito que queden centrados*/
+    background: #fdfdfd;
+    display: flex;
+    color: #333333;/*texto*/
+    width: 50%;/*para centrar el elemento a la mitad*/
+    padding: 1rem;/*padding alrededor*/
+    
+}
+
+/*los links que serian aplicaciones populares juegos en destaques y novedades*/
+.destaques__categorias___link{
+ color: inherit;/*Donde pusimos el coloren categorias item se pasa aca con esta atribucion*/
+}
+                     /*SECCION CATEGORIA*/
+/*DESTAQUES DE TITULOS DENTRO DE LAS IMAGENES*/
+.destaques__titulo{
+  color: #fdfdfd;/*letras dentro de las imagenes*/
+  background: rgb(0, 0, 0, 0.5);  /*background con opacidad*/
+  width: 100%;/*los titulos van a estar al 100% para que esten al borde de la pagina*/
+ text-align: center;/*queda el titulo en el centro*/
+ padding: .6rem;/*espaciamiento entre texto para que amplie la caja*/
+}
+
+
+/*box serias las clases de destaques secundarios "box" que son los que estan separados*/
+.box{
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*Aca terminamos la parte de la seccion de arriba*/

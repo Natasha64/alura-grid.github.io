@@ -1,0 +1,120 @@
+/*POPULARES*/
+.populares{
+    padding: 3rem 2rem;/*padding entre la parte superior del contenido de las imagenes por que estaba todo muy junto 3rem de arriba y 0 de costado*//*estaba en 3 rem y 0 al final le agregamos el 2rem*/
+ 
+}
+
+
+
+/*cards */
+.populares__card{
+ background: #fdfdfd;
+ display: grid;/*Se tiene que comportar como las otras secciones en grid*/
+ grid-template-areas:/*vamos a tener 2 areas definidas una que va a ser la imagen y otra el contenido*/ 
+ 'card-imagen'
+ 'card-base';
+ grid-template-columns: 100%;/*se van a comportar con una largo de columna*/
+ width:calc(20% - 1rem);/*columnas del 20% si tenemos 100% lo dividimos entre 5 columnas daria el 20% cada columna*//*se nos pusieron las cards una abajo de la otra con las imagenes mas chicas*/ /*al width en ves de dejarle el 20% lo vamos a calcular para ponerle un poco de margen entre cada fila */
+ grid-template-rows: 173px auto;/*tamaño de las imagenes: y una alargura automatica*/
+ margin-right: 1rem;
+}
+
+.populares__card___imagen{
+    grid-area: card-imagen;
+    height: 100%;/*altura*/
+    width: 100%;/*ancho*/
+}
+
+/*segunda area base*/
+.populares__card___base{
+   display: grid; /*va a tener dentro una grid*/
+   grid-area: card-base;
+   grid-row-gap: .5rem;/*espaciamientos.*/
+   grid-template-areas:/*definimos las templates areas dentro de las grids*/ 
+   'card-header'
+   'card-descripcion';
+   grid-template-rows:50px auto; /*espacios como el de contenido y footer*/
+   padding:.75rem;/*creo espacios entre los contenidos de aplicaciones*/
+
+}
+
+/*card descripcion*/
+.populares__card___descripcion{
+    display: flex;/*para que pueda tomar el formato adecuado*/
+    flex-wrap:wrap;/*los textos van a adaptarse al espacio que este disponble*/
+    grid-area: 
+    'card-descripcion';
+    padding: 1rem 0rem;/*arriba 1 rem y 0 a los lados*/
+}
+
+/*Populares contenido*/
+.populares__contenido{
+    display: flex;/*aca aplicamos para que se ponga una al lado de la otra*/
+    flex-wrap: wrap;/*se divide el contenido automaticamente*/
+    grid-area:contenido;
+    padding: 1rem 0rem;
+   
+    
+}
+
+/*titulos de las cards*/
+.populares__card___titulo{
+    color: #333333;/*color titulo*/
+    font-size: 1.5rem;/*tamaño del titulo*/
+    
+}
+
+/*fecha del contenido*/
+.populares__card___data{
+    color:#808080;/*color de la fecha*/
+    font-size: .9rem;/*se achica*/
+    
+
+}
+
+/*descripcion contenido*/
+.populares__card___descripcion{
+ color: #333333;/*color descripcion*/
+ line-height: 1.5;/*interlineado de texto tamaño de lineas*/
+ margin: 1rem 0;/*1rem arriba y abajo y 0 a los lados*/
+ text-align: justify;/*alineacion de texto*/
+}
+
+/*titulo de aplicaciones populares*/
+.populares__titulo{
+    font-weight: 500;/*que las letras sean menos negritas*/
+    
+    
+    
+
+}
+
+/*iconos que van en los titulos de populares novedades etc*/
+.populares__icon{
+ margin-right: .25rem;/*espacio entre icono y titulo*/
+ 
+
+}
+
+
+/*titulos dentro de las cards*/
+.populares__header{ /*populares_card_header*/
+    border-bottom: 1px solid #dcdcdc;/*color de la linea*/
+    display: flex;/*para que se ponga el titulo y la fecha al lado*/
+    justify-content: space-between;/*para darle espacio entre ellos*/
+   }
+
+
+/*boton de ver más*/
+.populares__boton{
+    background:transparent;/*color del boton*/
+    border: none;/*le sacamos el borde al boton*/
+    color: #333333;
+    
+}
+
+/*Aplicar espacio entre columnas esto aplica a las ultimas imagens mario bros,cs go etc*/
+.populares__card:last-child{
+    margin-right: 0;
+}
+

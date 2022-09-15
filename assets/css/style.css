@@ -1,0 +1,47 @@
+.app {
+    background: #f1f1f1;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    'header' 
+    'contenido'
+    'rodapie';
+    /*Tamaño de columnas*/
+    grid-template-columns: auto; /*seria el tamaño completo del navegador*/
+    grid-template-rows: 50px auto auto;/*necesito que el header tenga 50px y el footer 50px o 100px*/
+    /*100vh seria el contenido*/
+    
+}
+
+.header {
+    align-items:center;
+    display:flex;
+    grid-area: header;
+    padding: 0 2rem;/*de arriba y abajo y 2 a los lados*/    
+}
+
+.menu__link{
+    color: #333333;
+    padding: .5rem 1rem;/*5rem arriba y abajo y 1rem de lado a lado*/
+}
+
+.menu__link:hover, .menu__link:active{
+    border-bottom:2px solid #0073e6 ; /*border inferior la linea del menu*/
+}
+
+.contenido {
+ grid-area: contenido;
+ padding: 0 2rem;
+}
+
+
+
+.rodapie { 
+ background: #fdfdfd;
+ color: #333333;
+ grid-area: rodapie;
+ padding: 1rem;
+ text-align: center;
+    
+}
+

@@ -1,0 +1,37 @@
+@media only screen and (max-width: 600px) {/*si mi resolucion llega a 600px el cabezado cambia color,lo borramos y ahora creamos nuevo para la seccion*/
+    .destaques__secundario:nth-child(2), 
+    .destaques__secundario:nth-child(3),
+    .destaques__secundario:nth-child(4), 
+    .destaques__secundario:nth-child(5){
+        display:none;
+        grid-column:none;
+        grid-row:none;
+    }
+    
+    /*ACA VA DESTAQUE Y CATEGORIAS LAS 2 QUEDAN EN LA LINEA5*/
+    .destaques__principal ,
+    .destaques__categorias {
+        grid-column:1/ 5; /*le decimos que ocupe hasta la linea 5*//*asi la primer imagen ocupa todo el tamaño de pantalla*/
+        
+      }
+     .populares__contenido{
+        flex-direction: column;/*queda una imagen abajo de la otra*/
+        
+     }
+      .populares__card{
+        width: 100%;/*agarra todo el tamaño de la imagen*/
+        margin-bottom: 3rem;/*da un espaciamiento entre imagenes*/
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
